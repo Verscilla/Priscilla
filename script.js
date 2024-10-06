@@ -119,7 +119,7 @@ function submitWish() {
 
         // Kirim harapan melalui email menggunakan EmailJS
 
-        emailjs.send("service_qno1w0r", "template_5pku4id", {
+        emailjs.send("service_qno1w0r", "template_mkgn7z8", {
 
             wish: wishInput,
 
