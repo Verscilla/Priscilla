@@ -1,0 +1,252 @@
+body {
+
+    font-family: 'Arial', sans-serif;
+
+    background-color: #fce4ec;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    height: 100vh;
+
+    margin: 0;
+
+    overflow: hidden; /* Untuk menghindari scroll saat confetti muncul */
+
+}
+
+.card {
+
+    background-color: #fff;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    text-align: center;
+
+    padding: 20px;
+
+    width: 400px;
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+h1, h2, h3, p, .celebrate-button {
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    animation: fadeIn 1s forwards;
+
+}
+
+h1 {
+
+    color: #e91e63;
+
+    font-size: 36px;
+
+    animation-delay: 0.5s;
+
+}
+
+h2 {
+
+    color: #ad1457;
+
+    font-size: 24px;
+
+    margin-bottom: 15px;
+
+    animation-delay: 1s;
+  
+}
+
+h3 {
+   color: #e91e63;
+   font-size: 26px;
+   animation-delay: 1s;
+  
+}
+
+p {
+
+    color: #880e4f;
+
+    font-size: 18px;
+
+    line-height: 1.5;
+
+    animation-delay: 1.5s;
+
+}
+
+.celebrate-button {
+
+    background-color: #e91e63;
+
+    color: white;
+
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    animation-delay: 2s;
+
+}
+
+.celebrate-button:hover {
+
+    background-color: #ad1457;
+
+}
+
+/* Fade-in effect */
+
+@keyframes fadeIn {
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/* Confetti */
+
+.confetti {
+
+    position: absolute;
+
+    width: 10px;
+
+    height: 10px;
+
+    background-color: #e91e63;
+
+    animation: confettiFall 3s linear infinite;
+
+    z-index: 0;
+
+    top: -10px;
+
+}
+
+@keyframes confettiFall {
+
+    to {
+
+        transform: translateY(100vh) rotate(720deg);
+
+        opacity: 0;
+
+    }
+
+}
+
+/* Gaya untuk pesan tambahan */
+
+.extra-messages {
+
+    opacity: 0;
+
+    font-size: 18px;
+
+    color: #ad1457;
+
+    margin-top: 20px;
+
+    transition: opacity 2s ease;
+
+    line-height: 1.6;
+
+}
+
+.wish-section {
+
+    margin-top: 20px;
+
+    text-align: center;
+
+    opacity: 0;
+
+    transition: opacity 2s ease;
+
+}
+
+textarea {
+
+    width: 100%;
+
+    padding: 10px;
+
+    border: 1px solid #ad1457;
+
+    border-radius: 5px;
+
+    font-size: 16px;
+
+    margin-top: 10px;
+
+    resize: none;
+
+}
+
+.wish-button {
+
+    background-color: #ad1457;
+
+    color: white;
+
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    margin-top: 10px;
+
+    cursor: pointer;
+
+}
+
+.wish-button:hover {
+
+    background-color: #880e4f;
+
+}
+
+.user-wish {
+
+    margin-top: 20px;
+
+    font-size: 18px;
+
+    color: #ad1457;
+
+    text-align: center;
+
+    line-height: 1.6;
+
+    opacity: 0;
+
+    transition: opacity 2s ease;
+
+}
